@@ -82,7 +82,7 @@ if(GIT_EXECUTABLE AND NOT DEFINED FOOBAR_VERSION)
 
     set(FOOBAR_VERSION ${GIT_DESCRIBE_VERSION})
     set(version "$(git describe)")
-    message(version)
+    message(${version})
 
   endif()
 
