@@ -31,11 +31,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y cmake make g++
           sudo apt-get install --yes gcc-multilib g++-multilib
-          ls
-          echo "current DIR:"
-          pwd
-          cmake .
+          mkdir build
+          cd build
+          cmake ..
           make
+          ls
+          ./foobar
 
 
       # Runs a set of commands using the runners shell
