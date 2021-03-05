@@ -66,7 +66,7 @@ if(GIT_EXECUTABLE AND NOT DEFINED FOOBAR_VERSION)
 
   execute_process(
 
-    COMMAND ${GIT_EXECUTABLE} describe --always --tags  $(git rev-list --tags --max-count=1) #--abbrev=0 --dirty --match "v*"
+    COMMAND ${GIT_EXECUTABLE} describe --always --tags --dirty --match "v*"
 
     WORKING_DIRECTORY ${SRC_DIR}
 
