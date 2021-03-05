@@ -27,7 +27,15 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run:  |
+          apt-get update
+          apt-get install -y cmake make g++
+          apt-get install --yes gcc-multilib g++-multilib
+          mkdir build
+          cd build
+          cmake ../../..
+          make
+
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
