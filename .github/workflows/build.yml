@@ -28,9 +28,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a multi-line script for version
         run:  |
-          apt-get update
-          apt-get install -y cmake make g++
-          apt-get install --yes gcc-multilib g++-multilib
+          sudo apt-get update
+          sudo apt-get install -y cmake make g++
+          sudo apt-get install --yes gcc-multilib g++-multilib
           mkdir build
           cd build
           cmake ../../..
