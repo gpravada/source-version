@@ -33,6 +33,9 @@ jobs:
           sudo apt-get install --yes gcc-multilib g++-multilib
           mkdir build
           cd build
+          ls 
+          ls ../
+          ls ../../
           cmake ../../..
           make
 
