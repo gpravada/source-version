@@ -1,0 +1,4 @@
+/mnt/d/gitlab/version/build/CMakeFiles/rebuild_cache.dir
+/mnt/d/gitlab/version/build/CMakeFiles/edit_cache.dir
+/mnt/d/gitlab/version/build/CMakeFiles/foobar.dir
+/mnt/d/gitlab/version/build/CMakeFiles/version.dir
