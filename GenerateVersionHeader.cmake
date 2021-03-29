@@ -103,11 +103,11 @@ if(GIT_EXECUTABLE AND NOT DEFINED FOOBAR_VERSION)
   
 endif()
 
-message(DEBUG "Version \"${FOOBAR_VERSION}\".")
-message(DEBUG "SHA     \"${GIT_SHA}\".")
-message(DEBUG "Branch  \"${GIT_BRANCH}\".")
-message(DEBUG "Dirty?  \"${GIT_IS_DIRTY}\".")
-message(DEBUG "Time?  \"${BUILD_TIMESTAMP}\".")
+message(WARNING "Version \"${FOOBAR_VERSION}\".")
+message(WARNING "SHA     \"${GIT_SHA}\".")
+message(WARNING "Branch  \"${GIT_BRANCH}\".")
+message(WARNING "Dirty?  \"${GIT_IS_DIRTY}\".")
+message(WARNING "Time?  \"${BUILD_TIMESTAMP}\".")
 
 
 
