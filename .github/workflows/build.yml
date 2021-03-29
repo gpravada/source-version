@@ -32,11 +32,11 @@ jobs:
           sudo apt-get install -y cmake make g++
           sudo apt-get install --yes gcc-multilib g++-multilib
           mkdir build
-          cd build
-          cmake ..
-          make
           BUILD_TIMESTAMP=$(date)
           echo "$BUILD_TIMESTAMP"   
           export BUILD_TIMESTAMP
+          cd build
+          cmake ..
+          make
           ls
           ./foobar
