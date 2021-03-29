@@ -3,5 +3,7 @@
 #define FOOBAR_VERSION_H_
 
 #define FOOBAR_VERSION "@FOOBAR_VERSION@"
+#define GIT_SHA "@GIT_SHA@"
+
 
 #endif  /* FOOBAR_VERSION_H_ */
