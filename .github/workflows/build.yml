@@ -39,6 +39,4 @@ jobs:
           cmake ..
           make
           ls
-          cat dynamic_decoder_version.txt
-          cat dynamic_decoder_version_error.txt
           ./foobar
