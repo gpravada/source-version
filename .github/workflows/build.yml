@@ -35,5 +35,7 @@ jobs:
           cd build
           cmake ..
           make
+          BUILD_TIMESTAMP= $(date +%s.%N)
+          echo "${BUILD_TIMESTAMP}"          
           ls
           ./foobar
