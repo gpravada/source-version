@@ -65,17 +65,11 @@ endif()
 if(GIT_EXECUTABLE AND NOT DEFINED FOOBAR_VERSION)
 
   execute_process(
-
     COMMAND ${GIT_EXECUTABLE} describe --always --tags --dirty --match "v*"
-
     WORKING_DIRECTORY ${SRC_DIR}
-
     OUTPUT_VARIABLE GIT_DESCRIBE_VERSION
-
     RESULT_VARIABLE GIT_DESCRIBE_ERROR_CODE
-
     OUTPUT_STRIP_TRAILING_WHITESPACE
-
     )
 
   execute_process(
@@ -85,9 +79,7 @@ if(GIT_EXECUTABLE AND NOT DEFINED FOOBAR_VERSION)
   set(GIT_SHA ${GIT_FULL_SHA})
 
   if(NOT GIT_DESCRIBE_ERROR_CODE)
-
     set(FOOBAR_VERSION ${GIT_DESCRIBE_VERSION})
-
   endif()
 
 endif()
@@ -99,21 +91,13 @@ endif()
 # than anything else and spit out a warning to the developer.
 
 if(NOT DEFINED FOOBAR_VERSION)
-
   set(FOOBAR_VERSION v0.0.0-unknown)
-
   message(WARNING "Failed to determine FOOBAR_VERSION from repository tags. Using default version \"${FOOBAR_VERSION}\".")
-
 endif()
 
 if(NOT DEFINED GIT_SHA)
-
   set(GIT_SHA 0000000000000000)
-
   message(WARNING "Failed to determine GIT_SHA from repository tags. Using default version \"${GIT_SHA}\".")
-
-endif
-
-
+endif()
 
 configure_file(${SRC} ${DST} @ONLY)
