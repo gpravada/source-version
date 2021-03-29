@@ -50,8 +50,8 @@ if(GIT_EXECUTABLE AND NOT DEFINED FOOBAR_VERSION)
     WORKING_DIRECTORY ${SRC_DIR}
     OUTPUT_VARIABLE GIT_DESCRIBE_VERSION
     RESULT_VARIABLE GIT_DESCRIBE_ERROR_CODE
-    OUTPUT_FILE "${CMAKE_BINARY_DIR}/dynamic_decoder_version.txt"
-    ERROR_FILE "${CMAKE_BINARY_DIR}/dynamic_decoder_version_error.txt"         
+#    OUTPUT_FILE "${CMAKE_BINARY_DIR}/dynamic_decoder_version.txt"
+#    ERROR_FILE "${CMAKE_BINARY_DIR}/dynamic_decoder_version_error.txt"         
     OUTPUT_STRIP_TRAILING_WHITESPACE
     )
 
