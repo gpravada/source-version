@@ -4,6 +4,8 @@
 
 #define FOOBAR_VERSION "@FOOBAR_VERSION@"
 #define GIT_SHA "@GIT_SHA@"
+#define GIT_BRANCH "@GIT_BRANCH@"
+#define GIT_IS_DIRTY "@GIT_IS_DIRTY@"
 
 
 #endif  /* FOOBAR_VERSION_H_ */
