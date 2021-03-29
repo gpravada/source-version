@@ -7,7 +7,8 @@
 int main(void) {
 
     printf("Version: %s\n", FOOBAR_VERSION);
-    printf("SHA    :    %s\n", GIT_SHA);  
+    printf("SHA    : %s\n", GIT_SHA);  
+    printf("Branch : %s\n", GIT_BRANCH);  
 
     return 0;
 
