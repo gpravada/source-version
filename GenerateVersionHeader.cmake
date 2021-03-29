@@ -7,19 +7,12 @@ get_filename_component(SRC_DIR ${SRC} DIRECTORY)
 if(HG_EXECUTABLE AND NOT DEFINED VAL_VERSION)
 
   execute_process(
-
     COMMAND ${HG_EXECUTABLE} log --rev . --template
-
       "{latesttag}{sub\('\^-0-.*', '', '-{latesttagdistance}-m{node|short}'\)}"
-
     WORKING_DIRECTORY ${SRC_DIR}
-
     OUTPUT_VARIABLE HG_REVISION
-
     RESULT_VARIABLE HG_LOG_ERROR_CODE
-
     OUTPUT_STRIP_TRAILING_WHITESPACE
-
     )
 
 
@@ -27,33 +20,21 @@ if(HG_EXECUTABLE AND NOT DEFINED VAL_VERSION)
   # Append "-dirty" if the working copy is not clean
 
   execute_process(
-
     COMMAND ${HG_EXECUTABLE} id --id
-
     WORKING_DIRECTORY ${SRC_DIR}
-
     OUTPUT_VARIABLE HG_ID
-
     RESULT_VARIABLE HG_ID_ERROR_CODE
-
     OUTPUT_STRIP_TRAILING_WHITESPACE
-
     )
 
   # The hg id ends with '+' if there are uncommitted local changes
 
   if(HG_ID MATCHES "\\+$")
-
     set(HG_REVISION "${HG_REVISION}-dirty")
-
   endif()
 
-
-
   if(NOT HG_LOG_ERROR_CODE AND NOT HG_ID_ERROR_CODE)
-
     set(FOOBAR_VERSION ${HG_REVISION})
-
   endif()
 
 endif()
@@ -88,9 +69,10 @@ if(GIT_EXECUTABLE AND NOT DEFINED FOOBAR_VERSION)
   
   execute_process(
     COMMAND date '%Y-%m-%dT%H:%M:%S'
-    OUTPUT_VARIABLE BUILD_TIMESTAMP
+    OUTPUT_VARIABLE BUILDTIMESTAMP
     OUTPUT_STRIP_TRAILING_WHITESPACE
   )  
+  set(BUILD_TIMESTAMP ${BUILDTIMESTAMP})  
   
   execute_process(
     COMMAND ${GIT_EXECUTABLE} diff --shortstat
