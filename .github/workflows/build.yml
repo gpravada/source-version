@@ -36,6 +36,7 @@ jobs:
           cmake ..
           make
           BUILD_TIMESTAMP= $(date +%s.%N)
-          echo "${BUILD_TIMESTAMP}"          
+          echo "${BUILD_TIMESTAMP}"   
+          export BUILD_TIMESTAMP
           ls
           ./foobar
