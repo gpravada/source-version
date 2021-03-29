@@ -78,6 +78,12 @@ if(GIT_EXECUTABLE AND NOT DEFINED FOOBAR_VERSION)
 
     )
 
+  execute_process(
+    COMMAND ${GIT_EXECUTABLE} rev-parse HEAD
+    OUTPUT_VARIABLE GIT_FULL_SHA
+  )
+  set(GIT_SHA ${GIT_FULL_SHA})
+
   if(NOT GIT_DESCRIBE_ERROR_CODE)
 
     set(FOOBAR_VERSION ${GIT_DESCRIBE_VERSION})
@@ -99,6 +105,14 @@ if(NOT DEFINED FOOBAR_VERSION)
   message(WARNING "Failed to determine FOOBAR_VERSION from repository tags. Using default version \"${FOOBAR_VERSION}\".")
 
 endif()
+
+if(NOT DEFINED GIT_SHA)
+
+  set(GIT_SHA 0000000000000000)
+
+  message(WARNING "Failed to determine GIT_SHA from repository tags. Using default version \"${GIT_SHA}\".")
+
+endif
 
 
 
