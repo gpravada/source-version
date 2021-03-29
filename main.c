@@ -9,6 +9,7 @@ int main(void) {
     printf("Version: %s\n", FOOBAR_VERSION);
     printf("SHA    : %s\n", GIT_SHA);  
     printf("Branch : %s\n", GIT_BRANCH);  
+    printf("Dirty? : %s\n", GIT_IS_DIRTY);  
 
     return 0;
 
